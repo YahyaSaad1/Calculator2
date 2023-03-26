@@ -1,27 +1,22 @@
-let output = document.getElementById("calc");
-let clear = document.getElementById("clear");
+let outputt = document.getElementById("outputt");
 
 
-
-function display(num) {
-    output.value += num;
+clearr.onclick = function(){
+    outputt.value = "";
 }
 
-clear.onclick = function(){
-    output.value = "";
+Delett.onclick = function(){
+    outputt.value = outputt.value.slice(0, -1)
 }
 
-
-function Delete(){
-    output.value = output.value.slice(0, -1);
+function btn(num){
+    outputt.value += num ;
 }
 
-
-
-function calc(){
-   try {
-    output.value = eval(output.value);
-   } catch(Error) {
-    output.value = "Error"
-   }
+equal.onclick = function(){
+    try{
+        outputt.value = eval(outputt.value);
+    } catch {
+        outputt.value = "ERROR";
+    }
 }
